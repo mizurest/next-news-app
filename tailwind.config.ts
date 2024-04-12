@@ -11,7 +11,6 @@ const config: Config = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        gradation: "radial-gradient(2361.48% 189.21% at -3.97% -4.43%, #87A1D3 0%, #87A1D3 0.01%, #AADFF3 47.43%, #FFB8E3 100%)",
         white: "#ffffff",
         purple: "#3f3cbb",
         midnight: "#121063",

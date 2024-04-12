@@ -16,6 +16,10 @@
   }
 }
 
+body{
+  font-family: "YakuHanJP", var(--font-ibmplexsansjp), "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
 
 
 @layer utilities {

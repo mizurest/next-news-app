@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 type Props = {
   title: string;
   source: string;
@@ -14,7 +12,7 @@ const NewsCard = (props: Props) => {
         <img src={props.image} className="w-full h-full object-cover" alt="ニュースのサムネイル" />
       </div>
 
-      <div className="flex flex-col justify-center px-3">
+      <div className="flex flex-col justify-center px-4">
         <p className="text-md sm:text-base font-bold text-neutral-800 line-clamp-2 leading-relaxed">{props.title}</p>
         <p className="text-xs sm:text-sm mt-1 text-gray-400">{props.source}</p>
       </div>
