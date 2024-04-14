@@ -1,7 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 import NewsCard from "@/components/NewsCard";
 import Header from "@/components/Header";
