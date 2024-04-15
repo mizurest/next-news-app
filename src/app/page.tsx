@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import NewsCard from "@/components/NewsCard";
 import Header from "@/components/Header";
+import SkeletonCard from "@/components/SkeletonCard";
 
 type Item = {
   title: string;
@@ -16,24 +17,20 @@ type Item = {
 
 export default function Home() {
   const [article, setArticle] = useState([]);
-  const [isLoading, setIsLoding] = useState(false)
+  const [isLoading, setIsLoding] = useState(true);
 
-  console.log(isLoading)
+  const skeletonAmount = new Array(10).fill("");
 
   const getNews = async () => {
     const res = await fetch(`/api/news`);
     const data = await res.json();
     setArticle(data.news.articles);
-    setIsLoding(true)
+    setIsLoding(false);
   };
 
   useEffect(() => {
     getNews();
   }, []);
-
-  useEffect(() => {
-    // console.log(article.length);
-  }, [article]);
 
   return (
     <>
@@ -43,6 +40,12 @@ export default function Home() {
         {article.map((item: Item, i) => {
           return <NewsCard key={i} title={item.title} source={item.source.name} image={item.image} url={item.url} />;
         })}
+
+        {isLoading
+          ? skeletonAmount.map((item, i) => {
+              return <SkeletonCard key={i} />;
+            })
+          : ""}
       </main>
     </>
   );
