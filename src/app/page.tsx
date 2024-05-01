@@ -19,7 +19,7 @@ export default function Home() {
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoding] = useState(true);
 
-  const skeletonAmount = new Array(10).fill("");
+  const skeletonAmount = new Array(20).fill("");
 
   const getNews = async () => {
     const res = await fetch(`/api/news`);
